@@ -8,8 +8,8 @@ def prompt(msg)
   return value
 end
 
-def is_number?(str)
-    !str.match(/\d/).nil?
+def has_letter?(str)
+    str.match(/\d/).nil?
 end
 
 def get_inputs
@@ -17,7 +17,7 @@ def get_inputs
   num2 = prompt "What's the second number?"
   action = prompt "1) add 2) subtract 3) multiply 4) divide"
   
-  if !is_number?(num1) || !is_number?(num2) || !is_number?(action)
+  if has_letter?(num1) || has_letter?(num2) || has_letter?(action)
     puts "\n--- Only Numeric Characters, Please ---"
     get_inputs
   else
