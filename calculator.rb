@@ -1,5 +1,3 @@
-require 'pry'
-
 def say(msg)
   puts " => #{msg}"
 end
@@ -32,7 +30,6 @@ again = true
 
 while again == true do
   inputs = get_inputs
-  #binding.pry
     
   if inputs[2] == 1
     say inputs[0] + inputs[1]
